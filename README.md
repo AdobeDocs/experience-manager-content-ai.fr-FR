@@ -1,0 +1,16 @@
+---
+source-git-commit: e1c510cb52136f438bc794285dc4c47ea1d29007
+workflow-type: tm+mt
+source-wordcount: '96'
+ht-degree: 4%
+
+---
+# Documentation sur l’IA dédiée au contenu Adobe Experience Manager
+
+Il s’agit du référentiel pour la documentation d’Adobe Experience Manager as a Cloud Service. Cette documentation couvre l’installation, l’administration, la création d’utilisation et la personnalisation de l’expérience à l’aide d’as a Cloud Service.
+
+Vos contributions à la documentation sont les bienvenues. Reportez-vous aux ressources suivantes :
+
+* [contribution.md](contributing.md) Pour une présentation de la manière de contribuer à la documentation.
+* [guidelines.md](guidelines.md) Pour une présentation des attentes en matière de contributions et de la composition de vos contributions de documentation.
+* [code-of-Conduct.md](code-of-conduct.md) Pour une vue d’ensemble des normes de conduite régissant votre contribution à ce projet de documentation, veuillez consulter :
