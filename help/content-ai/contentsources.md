@@ -23,7 +23,7 @@ Ce guide vous guide tout au long de la configuration des sources d’IA dédiée
 Avant de commencer, assurez-vous que les conditions suivantes sont remplies :
 
 * Vous disposez d’un programme Cloud Manager actif avec au moins un environnement AEM as a Cloud Service.
-* Vous détenez le rôle **[Administrateur système](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)** dans Admin Console pour le programme.
+* Vous détenez le rôle **[Administrateur système](https://experienceleague.adobe.com/fr/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)** dans Admin Console pour le programme.
 * Le profil de produit d&#39;environnement a été configuré dans **&#x200B;**, voir [Configurer un projet Adobe Developer Console](setup-adc-project.md).
 
 ## Étape 1 : ouvrir l’onglet Configuration de l’IA dédiée au contenu {#open-tab}
