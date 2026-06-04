@@ -24,11 +24,11 @@ Avant de commencer, assurez-vous que les conditions suivantes sont remplies :
 
 * Vous disposez d’un programme Cloud Manager actif avec au moins un environnement AEM as a Cloud Service.
 * Vous détenez le rôle **[Administrateur système](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)** dans Admin Console pour le programme.
-* Le profil de produit d&#39;environnement a été configuré dans ****, voir [Configurer un projet Adobe Developer Console](setup-adc-project.md).
+* Le profil de produit d&#39;environnement a été configuré dans **&#x200B;**, voir [Configurer un projet Adobe Developer Console](setup-adc-project.md).
 
 ## Étape 1 : ouvrir l’onglet Configuration de l’IA dédiée au contenu {#open-tab}
 
-1. Connectez-vous à [](https://my.cloudmanager.adobe.com/) et sélectionnez votre programme.
+1. Connectez-vous à [&#128279;](https://my.cloudmanager.adobe.com/) et sélectionnez votre programme.
 
    ![Accueil Cloud Manager affichant la carte du programme](../assets/content-ai-onboarding-step-1.png)
 
@@ -120,7 +120,7 @@ Pour mettre à jour une configuration source après sa création :
    >
    >La suppression d’une source est permanente. Tout le contenu indexé pour cette source est supprimé et ne peut plus servir de requêtes de recherche.
 
-   ![ Boîte de dialogue Modifier le Source de l’IA dédiée au contenu avec les champs modifiables en surbrillance et un bouton Supprimer dans le coin inférieur gauche](../assets/content-ai-onboarding-step-12.png)
+   ![&#x200B; Boîte de dialogue Modifier le Source de l’IA dédiée au contenu avec les champs modifiables en surbrillance et un bouton Supprimer dans le coin inférieur gauche](../assets/content-ai-onboarding-step-12.png)
 
 La liste source est mise à jour pour prendre en compte vos modifications. Si vous avez supprimé la source, elle n’apparaît plus dans la liste.
 
