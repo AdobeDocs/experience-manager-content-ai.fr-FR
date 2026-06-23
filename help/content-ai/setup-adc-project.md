@@ -6,9 +6,9 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: AEM Content AI, Adobe Developer Console, authentification, serveur à serveur, clé API, jeton d’accès
-source-git-commit: 445aeafe64eb8a68d0770c1f1afb54d68e0b054f
+source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '714'
 ht-degree: 3%
 
 ---
@@ -27,6 +27,7 @@ Avant de commencer, vérifiez les points suivants :
 * Vous avez accès à [&#128279;](https://developer.adobe.com/console/) pour votre organisation.
 * Vous êtes ajouté en tant que **développeur** sur le profil de produit AEM Content AI Services dans **Adobe Admin Console**. Sans ce rôle, la carte d’API **[!UICONTROL AEM Content AI Services]** apparaît désactivée et l’option d’authentification **[!UICONTROL serveur à serveur]** est masquée.
 * Vous connaissez les numéros de programme et d’environnement du profil de produits que vous souhaitez sélectionner (par exemple, `AEM User - publish - Program 12345 - Environment 67890`).
+* Vous détenez le rôle **[Administrateur système](https://experienceleague.adobe.com/fr/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)** dans Admin Console pour le programme. Ce rôle vous permet de gérer les profils de produit et d’affecter des utilisateurs et utilisatrices à l’environnement.
 
 ## Choisir une méthode d’authentification {#choose-auth}
 

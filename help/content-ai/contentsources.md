@@ -6,9 +6,9 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: AEM Content AI, Sources de Content AI, Acquisition, Cloud Manager, Adobe Developer Console
-source-git-commit: 86c0b8b910583701dc4bd42b61e082cc5429cee8
+source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '1225'
 ht-degree: 1%
 
 ---
@@ -23,8 +23,42 @@ Ce guide vous guide tout au long de la configuration des sources d’IA dédiée
 Avant de commencer, assurez-vous que les conditions suivantes sont remplies :
 
 * Vous disposez d’un programme Cloud Manager actif avec au moins un environnement AEM as a Cloud Service.
-* Vous détenez le rôle **[Administrateur système](https://experienceleague.adobe.com/fr/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)** dans Admin Console pour le programme.
-* Le profil de produit d&#39;environnement a été configuré dans **&#x200B;**, voir [Configurer un projet Adobe Developer Console](setup-adc-project.md).
+* Votre utilisateur est affecté au profil de produit **Utilisateurs** pour l’environnement cible, ce qui lui permet d’afficher les sources de contenu.
+* Votre utilisateur est affecté au profil de produit **Administrateurs** pour l’environnement cible, ce qui lui permet de créer et de modifier des sources de contenu. L’accès à Cloud Manager seul n’est pas suffisant. Voir [Affecter un utilisateur à un profil de produit AEM](#assign-product-profile) ci-dessous.
+* Le profil de produit de l’environnement a été configuré dans **&#x200B;**.
+
+## Affectation d’un utilisateur à un profil de produit AEM {#assign-product-profile}
+
+Utilisez cette procédure pour accorder à un utilisateur l’accès à [!DNL Adobe Experience Manager] as a Cloud Service pour un environnement spécifique. Attribuez le profil correspondant à l’accès dont l’utilisateur a besoin :
+
+* **[!UICONTROL Utilisateurs AEM]** - afficher les sources de contenu.
+* **[!UICONTROL Administrateurs AEM]** - créer et modifier des sources de contenu.
+
+>[!NOTE]
+>
+>Les utilisateurs doivent appartenir à un profil de produit AEM tel que **[!UICONTROL Utilisateurs AEM]** ou **[!UICONTROL Administrateurs AEM]** pour accéder à AEM. L’accès à Cloud Manager seul n’est pas suffisant.
+
+Pour affecter ces profils, vous devez être un administrateur système avec le profil de produit Cloud Manager [!UICONTROL Propriétaire de l’entreprise]. Préparez le nom et l’adresse électronique de l’utilisateur.
+
+1. Dans [&#128279;](https://my.cloudmanager.adobe.com/), accédez à votre programme et sélectionnez **[!UICONTROL Gérer l’accès]** pour l’environnement cible. Un nouvel onglet s’ouvre [!DNL Adobe Admin Console] pour cet environnement.
+1. Sélectionnez le profil de produit **[!UICONTROL Utilisateurs]** ou **[!UICONTROL Administrateurs AEM]** pour le niveau **publication**, par exemple, `AEM Administrators - publish - Program 12345 - Environment 67890`. L’IA dédiée au contenu indexe le contenu publié. Par conséquent, le profil doit être attribué au niveau de la publication, et non de l’auteur.
+1. Sélectionnez **[!UICONTROL Ajouter un utilisateur]**.
+1. Saisissez le nom et l’adresse e-mail de l’utilisateur, puis enregistrez la modification. L’utilisateur est ajouté au profil de produit.
+
+Répétez ces étapes pour chaque environnement auquel l’utilisateur doit accéder, comme le développement, l’évaluation ou la production.
+
+>[!CAUTION]
+>
+>Ne modifiez ou ne supprimez pas les profils de produit par défaut nommés **[!UICONTROL Administrateurs]** ou **[!UICONTROL Utilisateurs AEM]**. Le changement de nom de **[!UICONTROL Administrateurs]** supprime les droits d’administrateur de toutes les personnes qui lui sont affectées.
+
+### Vérifier l’affectation {#verify-assignment}
+
+Pour vérifier que l’affectation a réussi :
+
+1. Dans [!DNL Admin Console], rouvrez le profil de produit que vous avez affecté.
+1. Vérifiez que l’utilisateur apparaît dans la liste des membres.
+
+Si vous résolvez les problèmes d’accès ou de jeton, vérifiez que l’utilisateur est ajouté directement au profil de produit et pas seulement par l’intermédiaire d’un groupe.
 
 ## Étape 1 : ouvrir l’onglet Configuration de l’IA dédiée au contenu {#open-tab}
 
