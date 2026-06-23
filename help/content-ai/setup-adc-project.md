@@ -6,9 +6,9 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: AEM Content AI, Adobe Developer Console, authentification, serveur à serveur, clé API, jeton d’accès
-source-git-commit: 445aeafe64eb8a68d0770c1f1afb54d68e0b054f
+source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '714'
 ht-degree: 3%
 
 ---
@@ -18,15 +18,16 @@ ht-degree: 3%
 
 Pour appeler l’API Content AI Services d’AEM, vous avez besoin d’informations d’identification émises par un projet Adobe Developer Console (ADC). Cette page vous guide tout au long de la création du projet, de la sélection d’une méthode d’authentification et de la génération des informations d’identification que vous incluez dans chaque requête API.
 
-Accédez à [&#128279;](https://developer.adobe.com/console/) pour lancer votre organisation.
+Accédez à [](https://developer.adobe.com/console/) pour lancer votre organisation.
 
 ## Conditions préalables {#prerequisites}
 
 Avant de commencer, vérifiez les points suivants :
 
-* Vous avez accès à [&#128279;](https://developer.adobe.com/console/) pour votre organisation.
+* Vous avez accès à [](https://developer.adobe.com/console/) pour votre organisation.
 * Vous êtes ajouté en tant que **développeur** sur le profil de produit AEM Content AI Services dans **Adobe Admin Console**. Sans ce rôle, la carte d’API **[!UICONTROL AEM Content AI Services]** apparaît désactivée et l’option d’authentification **[!UICONTROL serveur à serveur]** est masquée.
 * Vous connaissez les numéros de programme et d’environnement du profil de produits que vous souhaitez sélectionner (par exemple, `AEM User - publish - Program 12345 - Environment 67890`).
+* Vous détenez le rôle **[Administrateur système](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)** dans Admin Console pour le programme. Ce rôle vous permet de gérer les profils de produit et d’affecter des utilisateurs et utilisatrices à l’environnement.
 
 ## Choisir une méthode d’authentification {#choose-auth}
 
@@ -35,7 +36,7 @@ AEM Content AI Services prend en charge deux méthodes d’authentification. Sé
 | Méthode | Idéal pour |
 | --- | --- |
 | [Serveur à serveur](#s2s-auth) | Services principaux qui appellent l’API sans interaction de l’utilisateur. Renvoie un jeton d’accès de courte durée. |
-| [&#x200B; Clé API &#x200B;](#api-key-auth) | Intégrations côté client ou basées sur un navigateur qui appellent directement l’API . Renvoie une clé de longue durée étendue aux domaines autorisés. |
+| [ Clé API ](#api-key-auth) | Intégrations côté client ou basées sur un navigateur qui appellent directement l’API . Renvoie une clé de longue durée étendue aux domaines autorisés. |
 
 ## Authentification de serveur à serveur {#s2s-auth}
 
@@ -47,7 +48,7 @@ AEM Content AI Services prend en charge deux méthodes d’authentification. Sé
 
    >[!NOTE]
    >
-   >Si la carte d’API est désactivée avec un message « Licence requise », votre environnement AEM as a Cloud Service risque de ne pas être modernisé. Voir [&#x200B; Modernisation de l’environnement AEM as a Cloud Service](https://experienceleague.adobe.com/fr/docs/experience-manager-learn/cloud-service/aem-apis/openapis/setup#modernization-of-aem-as-a-cloud-service-environment).
+   >Si la carte d’API est désactivée avec un message « Licence requise », votre environnement AEM as a Cloud Service risque de ne pas être modernisé. Voir [ Modernisation de l’environnement AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/openapis/setup#modernization-of-aem-as-a-cloud-service-environment).
 
 1. Dans la boîte de dialogue **[!UICONTROL Configurer l’API]**, sélectionnez l’authentification **[!UICONTROL Serveur à serveur]**.
 

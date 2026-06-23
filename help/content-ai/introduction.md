@@ -6,9 +6,9 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: AEM Content AI, présentation, source de contenu, recherche sémantique, acquisition, Cloud Manager
-source-git-commit: 9b3c63be1aa95339086ee5994cd4dd7cdfa7e746
+source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '716'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ L’IA dédiée au contenu d’AEM est structurée sous la forme d’une pile à
 
 *Lisez la pile de bas en haut, du contenu approuvé à la base aux expériences agentiques qu’elle alimente au sommet.*
 
-1. Sources IA dédiées au contenu
+1. Sources de l’IA dédiée au contenu
 Les sources de contenu sont des entités gérées dans l’IA dédiée au contenu d’AEM qui se connectent à un corps de contenu approuvé. Un Source de contenu peut référencer un type de contenu régi par AEM tel que des ressources, des fragments de contenu, des pages, des formulaires, des métadonnées et des taxonomies, ainsi que des sources non AEM telles que des sites web tiers, des bases de connaissances ou des portails de documentation. Chaque Source de contenu est automatiquement vectorisé et enrichi sémantiquement pour alimenter les expériences de récupération, de mise à la terre et d’IA conversationnelle. Définissez les sources de contenu une fois et réutilisez-les dans les API d’IA dédiée au contenu avec l’actualisation et les mises à jour automatiques intégrées.
 
 1. Services de base de Content AI
@@ -67,7 +67,7 @@ Pour obtenir une intégration IA dédiée au contenu qui fonctionne, deux tâche
 
 ### &#x200B;2. Contrôle des sources d’IA dédiée au contenu {#control}
 
-Configurez et gérez vos sources d’IA de contenu pour activer les expériences basées sur l’IA. Voir [Contrôler vos sources de contenu](contentsources.md).
+Configurez et gérez vos sources d’IA de contenu pour activer les expériences basées sur l’IA. Pour plus d’informations, voir [Contrôler vos sources de contenu](contentsources.md).
 
 ## Découvrir les API de l’IA dédiée au contenu  {#apis}
 
