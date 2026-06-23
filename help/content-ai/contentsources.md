@@ -25,7 +25,7 @@ Avant de commencer, assurez-vous que les conditions suivantes sont remplies :
 * Vous disposez d’un programme Cloud Manager actif avec au moins un environnement AEM as a Cloud Service.
 * Votre utilisateur est affecté au profil de produit **Utilisateurs** pour l’environnement cible, ce qui lui permet d’afficher les sources de contenu.
 * Votre utilisateur est affecté au profil de produit **Administrateurs** pour l’environnement cible, ce qui lui permet de créer et de modifier des sources de contenu. L’accès à Cloud Manager seul n’est pas suffisant. Voir [Affecter un utilisateur à un profil de produit AEM](#assign-product-profile) ci-dessous.
-* Le profil de produit de l’environnement a été configuré dans ****.
+* Le profil de produit de l’environnement a été configuré dans **&#x200B;**.
 
 ## Affectation d’un utilisateur à un profil de produit AEM {#assign-product-profile}
 
@@ -40,7 +40,7 @@ Utilisez cette procédure pour accorder à un utilisateur l’accès à [!DNL Ad
 
 Pour affecter ces profils, vous devez être un administrateur système avec le profil de produit Cloud Manager [!UICONTROL Propriétaire de l’entreprise]. Préparez le nom et l’adresse électronique de l’utilisateur.
 
-1. Dans [](https://my.cloudmanager.adobe.com/), accédez à votre programme et sélectionnez **[!UICONTROL Gérer l’accès]** pour l’environnement cible. Un nouvel onglet s’ouvre [!DNL Adobe Admin Console] pour cet environnement.
+1. Dans [&#128279;](https://my.cloudmanager.adobe.com/), accédez à votre programme et sélectionnez **[!UICONTROL Gérer l’accès]** pour l’environnement cible. Un nouvel onglet s’ouvre [!DNL Adobe Admin Console] pour cet environnement.
 1. Sélectionnez le profil de produit **[!UICONTROL Utilisateurs]** ou **[!UICONTROL Administrateurs AEM]** pour le niveau **publication**, par exemple, `AEM Administrators - publish - Program 12345 - Environment 67890`. L’IA dédiée au contenu indexe le contenu publié. Par conséquent, le profil doit être attribué au niveau de la publication, et non de l’auteur.
 1. Sélectionnez **[!UICONTROL Ajouter un utilisateur]**.
 1. Saisissez le nom et l’adresse e-mail de l’utilisateur, puis enregistrez la modification. L’utilisateur est ajouté au profil de produit.
@@ -62,7 +62,7 @@ Si vous résolvez les problèmes d’accès ou de jeton, vérifiez que l’utili
 
 ## Étape 1 : ouvrir l’onglet Configuration de l’IA dédiée au contenu {#open-tab}
 
-1. Connectez-vous à [](https://my.cloudmanager.adobe.com/) et sélectionnez votre programme.
+1. Connectez-vous à [&#128279;](https://my.cloudmanager.adobe.com/) et sélectionnez votre programme.
 
    ![Accueil Cloud Manager affichant la carte du programme](../assets/content-ai-onboarding-step-1.png)
 
@@ -154,7 +154,7 @@ Pour mettre à jour une configuration source après sa création :
    >
    >La suppression d’une source est permanente. Tout le contenu indexé pour cette source est supprimé et ne peut plus servir de requêtes de recherche.
 
-   ![ Boîte de dialogue Modifier le Source de l’IA dédiée au contenu avec les champs modifiables en surbrillance et un bouton Supprimer dans le coin inférieur gauche](../assets/content-ai-onboarding-step-12.png)
+   ![&#x200B; Boîte de dialogue Modifier le Source de l’IA dédiée au contenu avec les champs modifiables en surbrillance et un bouton Supprimer dans le coin inférieur gauche](../assets/content-ai-onboarding-step-12.png)
 
 La liste source est mise à jour pour prendre en compte vos modifications. Si vous avez supprimé la source, elle n’apparaît plus dans la liste.
 
