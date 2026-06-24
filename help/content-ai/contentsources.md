@@ -6,9 +6,9 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: AEM Content AI, Sources de Content AI, Acquisition, Cloud Manager, Adobe Developer Console
-source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
+source-git-commit: d40fcb4a41c717ef4e6c82d95a36976b1f4de825
 workflow-type: tm+mt
-source-wordcount: '1225'
+source-wordcount: '1276'
 ht-degree: 1%
 
 ---
@@ -96,11 +96,13 @@ Une source de contenu définit le site web que l’IA dédiée au contenu explor
 
    ![Liste déroulante Fréquence d’actualisation affichant les options disponibles](../assets/content-ai-onboarding-step-5-1.png)
 
-1. Sélectionnez **[!UICONTROL Créer un Source]**.
+1. Sélectionnez **[!UICONTROL Créer un Source]**. L’acquisition démarre automatiquement et la source passe à **Indexation**.
 
-## Étape 3 - Déclencher L’Acquisition {#trigger-acquisition}
+   ![Liste Sources de contenu affichant la source nouvellement créée au statut Indexation &#x200B;](../assets/content-ai-onboarding-step-6.png)
 
-Une fois la source créée, son statut devient **Nouveau**. Exécutez une acquisition initiale pour démarrer l’indexation.
+## Etape 3 - Réexécuter l&#39;acquisition {#trigger-acquisition}
+
+L’acquisition s’exécute automatiquement lorsque vous créez une source, puis selon le planning défini par la **[!UICONTROL fréquence d’actualisation]**. Vous pouvez également déclencher une exécution manuelle à tout moment, par exemple, pour réindexer immédiatement après la publication d’un nouveau contenu.
 
 1. Dans la liste des sources, cliquez sur l’icône **plus d’actions** (...) en regard de votre source, puis sélectionnez **[!UICONTROL Déclencher l’acquisition]**.
 
@@ -116,7 +118,7 @@ Une fois l’acquisition commencée, le statut de la source se met à jour en te
 
 | État | Signification |
 | --- | --- |
-| **Nouveau** | Source créé ; aucune acquisition n’a encore été exécutée. |
+| **Nouveau** | Source vient de se créer ; l&#39;acquisition automatique n&#39;a pas encore commencé. Ce statut est bref. |
 | **Indexation** | L’acquisition est en cours. Le contenu est en cours d’explore et d’indexation. |
 | **Disponible** | L’indexation est terminée. La source est prête à répondre aux requêtes de recherche. |
 
@@ -130,15 +132,17 @@ Attendez que le statut atteigne **Disponible** avant de rechercher l’index ou 
 
 Une fois le statut de la source **Disponible**, vous pouvez exécuter des requêtes de recherche directement depuis Cloud Manager pour vérifier que le contenu a été indexé correctement.
 
-1. Dans la liste source, sélectionnez **[!UICONTROL Rechercher]** en regard de votre source.
+1. Dans la liste des sources, cliquez sur l’icône **rechercher** (loupe) située en regard de votre source.
 
-   ![Liste Sources de contenu avec le bouton Rechercher mis en surbrillance sur une source disponible](../assets/content-ai-onboarding-step-13.png)
+   ![Liste Sources de contenu avec l’icône de recherche mise en surbrillance sur une source disponible](../assets/content-ai-onboarding-step-13.png)
 
 1. Saisissez une requête dans le champ de recherche. Les résultats affichent une liste d’éléments correspondants avec un score et un type de contenu correspondants (par exemple, **PAGE** ou **PDF**). La sélection d’un résultat ouvre un aperçu à droite.
 
    ![Panneau de recherche avec une requête, les résultats correspondants avec des scores de correspondance et un volet de prévisualisation pour le résultat supérieur](../assets/content-ai-onboarding-step-14.png)
 
 ## Modification ou suppression d’un Source {#modify-source}
+
+### Modification d’une source {#modify}
 
 Pour mettre à jour une configuration source après sa création :
 
@@ -148,15 +152,19 @@ Pour mettre à jour une configuration source après sa création :
 
 1. Dans la boîte de dialogue **[!UICONTROL Modifier le Source de l’IA dédiée au contenu]**, mettez à jour les **[!UICONTROL Description]**, **[!UICONTROL Adresse du site web]**, **[!UICONTROL Exclure les URL]** ou **[!UICONTROL Fréquence d’actualisation]** selon les besoins. Le **[!UICONTROL Nom de la configuration de l’IA dédiée au contenu]** est en lecture seule et ne peut pas être modifié.
 
-1. Sélectionnez **[!UICONTROL Enregistrer]** pour appliquer les modifications, ou sélectionnez **[!UICONTROL Supprimer]** dans le coin inférieur gauche de la boîte de dialogue pour supprimer entièrement la source.
+   ![Boîte de dialogue Modifier le Source de l’IA dédiée au contenu avec les champs modifiables mis en surbrillance](../assets/content-ai-onboarding-step-12.png)
+
+1. Sélectionnez **[!UICONTROL Enregistrer]** pour appliquer les modifications. La liste source est mise à jour pour prendre en compte vos modifications.
+
+### Supprimer une source {#delete}
+
+1. Dans la liste source, cliquez sur l’icône **autres actions** (...) en regard de la source, puis sélectionnez **[!UICONTROL Supprimer]**.
 
    >[!WARNING]
    >
    >La suppression d’une source est permanente. Tout le contenu indexé pour cette source est supprimé et ne peut plus servir de requêtes de recherche.
 
-   ![&#x200B; Boîte de dialogue Modifier le Source de l’IA dédiée au contenu avec les champs modifiables en surbrillance et un bouton Supprimer dans le coin inférieur gauche](../assets/content-ai-onboarding-step-12.png)
-
-La liste source est mise à jour pour prendre en compte vos modifications. Si vous avez supprimé la source, elle n’apparaît plus dans la liste.
+Après la suppression, la source n’apparaît plus dans la liste.
 
 ## Étapes suivantes {#next-steps}
 
