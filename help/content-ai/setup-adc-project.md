@@ -1,84 +1,84 @@
 ---
-title: Configuration d’un projet Adobe Developer Console pour l’IA dédiée au contenu AEM
-description: Découvrez comment configurer un projet Adobe Developer Console et authentifier les appels API vers AEM Content AI Services à l’aide de l’authentification de serveur à serveur ou par clé API.
+title: Configurer un projet Adobe Developer Console pour l’IA dédiée au contenu d’AEM
+description: Découvrez comment configurer un projet Adobe Developer Console et authentifier les appels API vers les services d’IA dédiée au contenu d’AEM l’aide de l’authentification de serveur à serveur ou par clé API.
 topic: Configuration
 role: Developer, Admin
 level: Beginner
 solution: Experience Manager
-keywords: AEM Content AI, Adobe Developer Console, authentification, serveur à serveur, clé API, jeton d’accès
+keywords: IA dédiée au contenu d’AEM, Adobe Developer Console, authentification, serveur à serveur, clé API, jeton d’accès
 source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
 workflow-type: tm+mt
 source-wordcount: '714'
-ht-degree: 3%
+ht-degree: 98%
 
 ---
 
 
-# Configuration d’un projet Adobe Developer Console {#configure-adc-project}
+# Configurer un projet Adobe Developer Console {#configure-adc-project}
 
-Pour appeler l’API Content AI Services d’AEM, vous avez besoin d’informations d’identification émises par un projet Adobe Developer Console (ADC). Cette page vous guide tout au long de la création du projet, de la sélection d’une méthode d’authentification et de la génération des informations d’identification que vous incluez dans chaque requête API.
+Pour appeler l’API de services d’IA dédiée au contenu d’AEM, vous avez besoin d’informations d’identification émises par un projet Adobe Developer Console (ADC). Cette page vous guide tout au long de la création du projet, de la sélection d’une méthode d’authentification et de la génération des informations d’identification que vous incluez dans chaque requête API.
 
-Accédez à [&#128279;](https://developer.adobe.com/console/) pour lancer votre organisation.
+Accédez à [Adobe Developer Console](https://developer.adobe.com/console/) pour votre organisation afin de commencer.
 
-## Conditions préalables {#prerequisites}
+## Prérequis {#prerequisites}
 
-Avant de commencer, vérifiez les points suivants :
+Avant de commencer, vérifiez que vous disposez des éléments suivants :
 
-* Vous avez accès à [&#128279;](https://developer.adobe.com/console/) pour votre organisation.
-* Vous êtes ajouté en tant que **développeur** sur le profil de produit AEM Content AI Services dans **Adobe Admin Console**. Sans ce rôle, la carte d’API **[!UICONTROL AEM Content AI Services]** apparaît désactivée et l’option d’authentification **[!UICONTROL serveur à serveur]** est masquée.
-* Vous connaissez les numéros de programme et d’environnement du profil de produits que vous souhaitez sélectionner (par exemple, `AEM User - publish - Program 12345 - Environment 67890`).
-* Vous détenez le rôle **[Administrateur système](https://experienceleague.adobe.com/fr/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)** dans Admin Console pour le programme. Ce rôle vous permet de gérer les profils de produit et d’affecter des utilisateurs et utilisatrices à l’environnement.
+* Vous avez accès à [Adobe Developer Console](https://developer.adobe.com/console/) pour votre organisation.
+* Vous avez le rôle de **développeur ou développeuse** sur le profil de produit de services d’IA dédiée au contenu d’AEM dans **Adobe Admin Console**. Sans ce rôle, la carte de l’API **[!UICONTROL Services d’IA dédiée au contenu d’AEM]** apparaît désactivée et l’option d’authentification **[!UICONTROL serveur à serveur]** est masquée.
+* Vous connaissez les numéros de programme et d’environnement du profil de produit que vous souhaitez sélectionner (par exemple, `AEM User - publish - Program 12345 - Environment 67890`).
+* Vous détenez le rôle **[Administrateur ou administratrice système](https://experienceleague.adobe.com/fr/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)** dans Admin Console pour le programme. Ce rôle vous permet de gérer les profils de produit et d’affecter des utilisateurs et utilisatrices à l’environnement.
 
 ## Choisir une méthode d’authentification {#choose-auth}
 
-AEM Content AI Services prend en charge deux méthodes d’authentification. Sélectionnez celui qui correspond à votre intégration :
+Les services d’IA dédiée au contenu d’AEM prennent en charge deux méthodes d’authentification. Sélectionnez celle qui correspond à votre intégration :
 
 | Méthode | Idéal pour |
 | --- | --- |
-| [Serveur à serveur](#s2s-auth) | Services principaux qui appellent l’API sans interaction de l’utilisateur. Renvoie un jeton d’accès de courte durée. |
-| [&#x200B; Clé API &#x200B;](#api-key-auth) | Intégrations côté client ou basées sur un navigateur qui appellent directement l’API . Renvoie une clé de longue durée étendue aux domaines autorisés. |
+| [Serveur à serveur](#s2s-auth) | Services backend qui appellent l’API sans intervention de l’utilisateur ou utilisatrices. Renvoie un jeton d’accès de courte durée. |
+| [Clé API](#api-key-auth) | Intégrations côté client ou basées sur un navigateur qui appellent directement l’API. Renvoie une clé à longue durée de vie limitée aux domaines autorisés. |
 
 ## Authentification de serveur à serveur {#s2s-auth}
 
 1. Sélectionnez **[!UICONTROL API et services]**, puis **[!UICONTROL API]**.
 
-   ![Developer Console présentant les API et les services](../assets/e2e-env-setup-28.png)
+   ![Developer Console affichant les API et les services](../assets/e2e-env-setup-28.png)
 
-1. Filtrez par **AEM Content AI Services**, puis sélectionnez **[!UICONTROL Créer un projet]** pour démarrer un nouveau projet, ou **[!UICONTROL Ajouter une API]** si vous ajoutez le service à un projet existant.
+1. Filtrez par **Services d’IA dédiée au contenu d’AEM**, puis sélectionnez **[!UICONTROL Créer un projet]** pour démarrer un nouveau projet, ou **[!UICONTROL Ajouter une API]** si vous ajoutez le service à un projet existant.
 
    >[!NOTE]
    >
-   >Si la carte d’API est désactivée avec un message « Licence requise », votre environnement AEM as a Cloud Service risque de ne pas être modernisé. Voir [&#x200B; Modernisation de l’environnement AEM as a Cloud Service](https://experienceleague.adobe.com/fr/docs/experience-manager-learn/cloud-service/aem-apis/openapis/setup#modernization-of-aem-as-a-cloud-service-environment).
+   >Si la carte de l’API est désactivée avec un message « Licence requise », il se peut que votre environnement AEM as a Cloud Service n’ait pas été modernisé. Consultez [Moderniser lʼenvironnement AEM as a Cloud Service](https://experienceleague.adobe.com/fr/docs/experience-manager-learn/cloud-service/aem-apis/openapis/setup#modernization-of-aem-as-a-cloud-service-environment).
 
-1. Dans la boîte de dialogue **[!UICONTROL Configurer l’API]**, sélectionnez l’authentification **[!UICONTROL Serveur à serveur]**.
+1. Dans la boîte de dialogue **[!UICONTROL Configurer l’API]** , sélectionnez l’authentification **[!UICONTROL Serveur à serveur]**.
 
    ![Boîte de dialogue Configurer l’API avec l’option Serveur à serveur sélectionnée](../assets/e2e-env-setup-29.png)
 
    >[!TIP]
    >
-   >Si l’option Serveur à serveur n’est pas disponible, l’utilisateur configurant l’intégration n’est pas ajouté en tant que développeur au profil de produit. Voir [Activer l’authentification de serveur à serveur](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation).
+   >Si l’option d’authentification de serveur à serveur n’est pas disponible, la personne qui configure l’intégration n’est pas ajoutée en tant que développeur ou développeuse au profil de produit auquel le service est associé. Consultez [Activer l’authentification de serveur à serveur](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation).
 
 1. Si nécessaire, renommez les informations d’identification. Sélectionnez **[!UICONTROL Suivant]**.
 
-   ![Étape Adobe Developer Console pour renommer les nouvelles informations d&#39;identification de serveur à serveur avant de sélectionner Suivant](../assets/e2e-env-setup-30.png)
+   ![Étape Adobe Developer Console pour renommer les nouvelles informations d’identification de serveur à serveur avant de sélectionner Suivant](../assets/e2e-env-setup-30.png)
 
-1. Sélectionnez le profil de produit **[!UICONTROL Utilisateur AEM - publication - Programme XXX - Environnement XXX]** et/ou **[!UICONTROL Utilisateur AEM - auteur - Programme XXX - Environnement XXX]**, puis sélectionnez **[!UICONTROL Enregistrer]**.
+1. Sélectionnez le profil de produit **[!UICONTROL Utilisateur et utilisatrice AEM – publication – Programme XXX – Environnement XXX]** et/ou **[!UICONTROL Utilisateur et utilisatrice AEM – création – Programme XXX – Environnement XXX]** et cliquez sur **[!UICONTROL Enregistrer]**.
 
-   ![Sélecteur de profil de produit affichant les profils de publication et de création de l’utilisateur AEM pour le programme et l’environnement cibles](../assets/e2e-env-setup-31.png)
+   ![Sélecteur de profil de produit affichant les profils de publication et de création de l’utilisateur ou utilisatrice AEM pour le programme et l’environnement cibles](../assets/e2e-env-setup-31.png)
 
-1. Examinez la configuration de l’API et de l’authentification.
+1. Vérifier l’API et la configuration de l’authentification
 
-   ![Écran de vérification résumant l’API sélectionnée, le type d’authentification et le nom des informations d’identification](../assets/e2e-env-setup-33.png)
+   ![Écran Vérifier résumant l’API sélectionnée, le type d’authentification et le nom des informations d’identification](../assets/e2e-env-setup-33.png)
 
-   ![Consulter les détails de l’écran affichant les profils de produit affectés pour les informations d’identification](../assets/e2e-env-setup-34.png)
+   ![Détails de l’écran Vérifier affichant les profils de produit affectés pour les informations d’identification](../assets/e2e-env-setup-34.png)
 
 ### Générer un jeton d’accès {#generate-token}
 
-1. Dans votre projet ADC, accédez à **[!UICONTROL Informations d’identification]** et sélectionnez **[!UICONTROL Générer un jeton d’accès]**.
+1. Dans votre projet ADC, accédez à **[!UICONTROL Informations d’identification]** et sélectionnez **[!UICONTROL Générer un jeton d’accès]**.
 
-   ![Page des informations d’identification avec le bouton Générer un jeton d’accès en surbrillance](../assets/e2e-env-setup-32.png)
+   ![Page des informations d’identification avec le bouton Générer un jeton d’accès en évidence](../assets/e2e-env-setup-32.png)
 
-1. Incluez le jeton dans l’en-tête `Authorization` de chaque requête API :
+1. Incluez le jeton dans l’en-tête `Authorization` de chaque requête API :
 
    ```http
    Authorization: Bearer YOUR_ACCESS_TOKEN
@@ -86,35 +86,35 @@ AEM Content AI Services prend en charge deux méthodes d’authentification. Sé
 
    >[!WARNING]
    >
-   >Stockez le jeton en toute sécurité. Il expire et doit être régénéré périodiquement.
+   >Conservez le jeton en toute sécurité. Il expire et doit être régénéré régulièrement.
 
 ## Authentification par clé API {#api-key-auth}
 
-1. Lors de l’ajout de l’API Content AI Services AEM à votre projet, sélectionnez **[!UICONTROL Clé API]** dans la boîte de dialogue **[!UICONTROL Sélectionner le type d’authentification]**.
+1. Lors de l’ajout de l’API Services d’IA dédiée au contenu d’AEM à votre projet, sélectionnez **[!UICONTROL Clé API]** dans la boîte de dialogue **[!UICONTROL Sélectionner le type d’authentification]**.
 
-   ![Sélectionnez le type d’authentification de la clé API](../assets/onboarding-api-key-01.png)
+   ![Sélectionner le type d’authentification par clé API](../assets/onboarding-api-key-01.png)
 
 1. Confirmez les informations d’identification de la clé API.
 
-   ![Ajout d’informations d’identification de clé API](../assets/onboarding-api-key-02.png)
+   ![Ajouter des informations d’identification de clé API](../assets/onboarding-api-key-02.png)
 
-1. Pour limiter les origines qui peuvent utiliser la clé, configurez les domaines autorisés.
+1. Pour limiter les sources qui peuvent utiliser la clé, configurez les domaines autorisés.
 
    ![Configurer les domaines autorisés](../assets/onboarding-api-key-03.png)
 
-1. Votre clé API (ID client) s’affiche sous **[!UICONTROL Informations d’identification connectées]**. Sélectionnez **[!UICONTROL Copie]**.
+1. Votre clé API (ID client) s’affiche sous **[!UICONTROL Informations d’identification connectées]**. Sélectionnez **[!UICONTROL Copier]**.
 
    ![Copier la clé API à partir des informations d’identification connectées](../assets/onboarding-api-key-04.png)
 
-1. Incluez la clé dans chaque requête API :
+1. Incluez la clé dans chaque requête API :
 
    ```http
    x-api-key: YOUR_API_KEY
    ```
 
-   Votre projet est maintenant prêt. Utilisez la clé avec chaque requête à AEM Content AI Services.
+   Votre projet est désormais prêt. Utilisez la clé avec chaque requête à Services d’IA dédiée au contenu d’AEM.
 
 ## Étapes suivantes {#next-steps}
 
-* [Contrôler vos sources de contenu](contentsources.md) - Configurez une source de contenu dans Cloud Manager et déclenchez l’acquisition.
-* [Référence de l’API Content AI](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) - Utilisez votre jeton d’accès ou votre clé API pour interroger le contenu indexé.
+* [Contrôler vos sources de contenu](contentsources.md) : configurez une source de contenu dans Cloud Manager et déclenchez l’acquisition.
+* [Référence de l’API d’IA dédiée au contenu](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) : utilisez votre jeton d’accès ou votre clé API pour interroger le contenu indexé.
