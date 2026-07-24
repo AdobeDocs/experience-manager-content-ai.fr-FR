@@ -7,9 +7,9 @@ level: Beginner
 solution: Experience Manager
 keywords: IA dédiée au contenu d’AEM, Adobe Developer Console, authentification, serveur à serveur, clé API, jeton d’accès
 source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '714'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
