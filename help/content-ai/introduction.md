@@ -7,9 +7,9 @@ level: Beginner
 solution: Experience Manager
 keywords: IA dédiée au contenu d’AEM, vue d’ensemble, source de contenu, recherche sémantique, acquisition, Cloud Manager
 source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '885'
-ht-degree: 75%
+ht-degree: 100%
 
 ---
 
@@ -18,8 +18,8 @@ ht-degree: 75%
 
 ## Contenu intelligent, IA native {#ai-ready}
 
-Les clients commencent à rencontrer les marques par le biais de l’IA avant même de rencontrer un site web. Assistants de conversation, présentations de l’IA, agents, recherche conversationnelle, assistants d’IA : ils récupèrent, résument et représentent tous le contenu de la marque au nom de la marque. Ce qu’ils disent n’est exact, à jour et intégré à la marque que par rapport au contenu auquel ils peuvent accéder.
-C’est pour cela que l’IA dédiée au contenu d’AEM a été conçue. Il traite le contenu de marque comme la vérité de base sur laquelle s’exécutent les expériences d’IA et fournit aux clients AEM les outils nécessaires pour créer cette vérité de base plus rapidement du côté auteur et la diffuser proprement aux expériences axées sur l’IA destinées aux consommateurs du côté publication.
+Le premier contact de la clientèle avec une marque s’opère par le biais de l’IA, avant même de se rendre sur son site web. Assistants de conversation, présentations par l’IA, agents, recherche conversationnelle, assistants IA : ils récupèrent, résument et représentent le contenu de la marque au nom de la marque. Leurs réponses ne sont exactes, à jour et dans le ton de la marque que si le contenu auquel ils peuvent accéder l’est également.
+L’IA dédiée au contenu d’AEM se propose de résoudre ce problème. Elle traite le contenu de marque comme étant le socle sur lequel reposent les expériences d’IA et fournit aux clients et clientes AEM les outils nécessaires pour bâtir celui-ci plus rapidement du côté création et diffuser ce contenu ancré proprement aux expériences axées sur l’IA destinées à la clientèle du côté publication.
 
 **Côté création**, l’IA dédiée au contenu d’AEM s’appuie sur des sources approuvées par la marque pour la création de contenu. La création assistée par l’IA, la découverte en langage naturel dans le contenu de pages, les fragments et les ressources existants, ainsi que la génération basée sur la marque permettent aux équipes de produire des variations pour de nouveaux canaux, audiences et régions sans quitter AEM et sans s’écarter de ce qui est déjà approuvé.
 
@@ -27,10 +27,10 @@ C’est pour cela que l’IA dédiée au contenu d’AEM a été conçue. Il tra
 
 ### Signification pour les clientes et clients AEM {#what-it-means}
 
-Le contenu approuvé est la défense de la marque contre les hallucinations. Lorsque l’IA repose sur du contenu AEM régi, les réponses restent par défaut exactes, à jour et sur la marque.
-La création suit le rythme de la demande de l’ère de l’IA. Les équipes génèrent des copies et des images pour un plus grand nombre d’audiences et de moments dans l’expérience de création, en puisant à des sources approuvées plutôt qu’en commençant vide.
-La découverte fonctionne comme les gens et les machines le demandent. La recherche en langage naturel basée sur l’intention dans les ressources, fragments, pages et formulaires transforme le contenu existant en un fichier réutilisable.
-Personalization évolue en fonction de la réutilisation, et non de la duplication. Les composants régis se recombinent en variantes au lieu de se multiplier en copies non suivies.
+Le contenu approuvé est le rempart ultime de la marque contre les hallucinations. Lorsque l’IA repose sur du contenu AEM qui a fait l’objet d’un ancrage, les réponses restent par défaut exactes, à jour et dans le ton de la marque.
+La création suit le rythme de la demande de l’ère de l’IA. Les équipes génèrent des copies et des images pour un plus grand nombre d’audiences et de moments dans l’expérience de création, en puisant à des sources approuvées plutôt qu’en commençant à partir d’une page vide.
+Le processus de découverte s’adapte à la façon dont les personnes et les machines effectuent leurs demandes. La recherche en langage naturel basée sur l’intention dans les ressources, fragments, pages et formulaires transforme le contenu existant en un fichier réutilisable.
+La personnalisation évolue en fonction de la réutilisation, et non de la duplication. Les composants approuvés se recombinent en variantes au lieu de se multiplier en copies non suivies.
 Les canaux de publication incluent désormais des surfaces d’IA. Le contenu est diffusé sous des formes que les humains, les agents et les expériences médiées par l’IA peuvent tous utiliser, sans pipeline distinct pour chacun.
 
 **Le point essentiel : le contenu de marque existant et approuvé n’a jamais été aussi précieux qu’aujourd’hui. Chaque fragment, ressource et page approuvé qui réside déjà dans AEM devient la source de vérité dont dépendent les expériences pilotées par l’IA. C’est grâ ce à l’IA dédiée au contenu d’AEM que cette bibliothèque est réutilisable, détectable et prête à alimenter ce qui vient ensuite.**
@@ -67,8 +67,8 @@ Pour obtenir une intégration de l’IA dédiée au contenu fonctionnelle, deux 
 
 ### &#x200B;2. Contrôler vos sources d’IA dédiée au contenu {#control}
 
-Configurez et gérez vos sources d’IA de contenu pour activer les expériences basées sur l’IA. Pour plus d’informations, voir [Contrôler vos sources de contenu](contentsources.md).
+Configurez et gérez vos sources d’IA dédiée au contenu pour activer les expériences basées sur l’IA. Consultez [Contrôler vos sources de contenu](contentsources.md) pour en savoir plus.
 
 ## Découvrir les API de l’IA dédiée au contenu  {#apis}
 
-Explorez l’ampleur fonctionnelle de l’IA dédiée au contenu d’AEM : les API révèlent tout le potentiel de la plateforme. Voir [API IA dédiée au contenu](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/).
+Explorez l’ampleur fonctionnelle de l’IA dédiée au contenu d’AEM : les API révèlent tout le potentiel de la plateforme. Consultez les [APId’ IA dédiée au contenu](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/).

@@ -7,9 +7,9 @@ level: Beginner
 solution: Experience Manager
 keywords: IA dédiée au contenu d’AEM, sources d’IA dédiée au contenu, acquisition, Cloud Manager, Adobe Developer Console
 source-git-commit: d40fcb4a41c717ef4e6c82d95a36976b1f4de825
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1276'
-ht-degree: 61%
+ht-degree: 100%
 
 ---
 
@@ -23,42 +23,42 @@ Ce guide vous accompagne tout au long de la configuration des sources d’IA dé
 Avant de commencer, assurez-vous que les conditions suivantes sont remplies :
 
 * Vous disposez d’un programme Cloud Manager actif avec au moins un environnement AEM as a Cloud Service.
-* Votre utilisateur est affecté au profil de produit **Utilisateurs** pour l’environnement cible, ce qui lui permet d’afficher les sources de contenu.
-* Votre utilisateur est affecté au profil de produit **Administrateurs** pour l’environnement cible, ce qui lui permet de créer et de modifier des sources de contenu. L’accès à Cloud Manager seul n’est pas suffisant. Voir [Affecter un utilisateur à un profil de produit AEM](#assign-product-profile) ci-dessous.
-* Le profil de produit de l’environnement a été configuré dans **&#x200B;**.
+* La personne utilisatrice est affectée au profil de produit **Utilisateurs et utilisatrices AEM** pour l’environnement cible, ce qui lui permet d’afficher les sources de contenu.
+* La personne utilisatrice est affectée au profil de produit **Administrateurs et administratrices AEM** pour l’environnement cible, ce qui lui permet de créer et de modifier des sources de contenu. L’accès à Cloud Manager seul n’est pas suffisant. Consultez l’article [Affecter un utilisateur ou une utilisatrice à un profil de produit AEM](#assign-product-profile) ci-dessous.
+* Le profil de produit d’environnement a été configuré dans **Adobe Admin Console**.
 
-## Affectation d’un utilisateur à un profil de produit AEM {#assign-product-profile}
+## Affecter un utilisateur ou une utilisatrice à un profil de produit AEM {#assign-product-profile}
 
-Utilisez cette procédure pour accorder à un utilisateur l’accès à [!DNL Adobe Experience Manager] as a Cloud Service pour un environnement spécifique. Attribuez le profil correspondant à l’accès dont l’utilisateur a besoin :
+Suivez cette procédure pour accorder à un utilisateur ou à une utilisatrice l’accès à [!DNL Adobe Experience Manager] as a Cloud Service pour un environnement spécifique. Attribuez le profil correspondant à l’accès dont l’utilisateur ou l’utilisatrice a besoin :
 
-* **[!UICONTROL Utilisateurs AEM]** - afficher les sources de contenu.
-* **[!UICONTROL Administrateurs AEM]** - créer et modifier des sources de contenu.
+* **[!UICONTROL Utilisateurs et utilisatrices AEM]** - affichage des sources de contenu.
+* **[!UICONTROL Administrateurs et administratrices AEM]** - création et modification des sources de contenu.
 
 >[!NOTE]
 >
->Les utilisateurs doivent appartenir à un profil de produit AEM tel que **[!UICONTROL Utilisateurs AEM]** ou **[!UICONTROL Administrateurs AEM]** pour accéder à AEM. L’accès à Cloud Manager seul n’est pas suffisant.
+>Les utilisateurs et utilisatrices doivent appartenir à un profil de produit AEM tel que **[!UICONTROL Utilisateurs et utilisatrices AEM]** ou **[!UICONTROL Administrateurs et administratrices AEM]** pour accéder à AEM. L’accès à Cloud Manager seul n’est pas suffisant.
 
-Pour affecter ces profils, vous devez être un administrateur système avec le profil de produit Cloud Manager [!UICONTROL Propriétaire de l’entreprise]. Préparez le nom et l’adresse électronique de l’utilisateur.
+Pour attribuer ces profils, vous devez être un administrateur ou une administratrice système avec le profil de produit Cloud Manager [!UICONTROL Propriétaire de l’entreprise]. Préparez le nom et l’adresse e-mail de l’utilisateur ou de l’utilisatrice.
 
-1. Dans [&#128279;](https://my.cloudmanager.adobe.com/), accédez à votre programme et sélectionnez **[!UICONTROL Gérer l’accès]** pour l’environnement cible. Un nouvel onglet s’ouvre [!DNL Adobe Admin Console] pour cet environnement.
-1. Sélectionnez le profil de produit **[!UICONTROL Utilisateurs]** ou **[!UICONTROL Administrateurs AEM]** pour le niveau **publication**, par exemple, `AEM Administrators - publish - Program 12345 - Environment 67890`. L’IA dédiée au contenu indexe le contenu publié. Par conséquent, le profil doit être attribué au niveau de la publication, et non de l’auteur.
-1. Sélectionnez **[!UICONTROL Ajouter un utilisateur]**.
-1. Saisissez le nom et l’adresse e-mail de l’utilisateur, puis enregistrez la modification. L’utilisateur est ajouté au profil de produit.
+1. Dans [Cloud Manager](https://my.cloudmanager.adobe.com/), accédez à votre programme et sélectionnez **[!UICONTROL Gérer l’accès]** pour l’environnement cible. Un nouvel onglet affiche [!DNL Adobe Admin Console] pour cet environnement.
+1. Sélectionnez le profil de produit **[!UICONTROL Utilisateurs ou utilisatrices AEM]** ou **[!UICONTROL Administrateurs et administratrices AEM]** pour le niveau **Publication**, par exemple, `AEM Administrators - publish - Program 12345 - Environment 67890`. L’IA dédiée au contenu indexe le contenu publié. Par conséquent, le profil doit être attribué au niveau de la publication, et non de l’auteur ou de l’autrice.
+1. Sélectionnez **[!UICONTROL Ajouter un utilisateur ou une utilisatrice]**.
+1. Saisissez le nom et l’adresse e-mail de l’utilisateur ou de l’utilisatrice, puis enregistrez la modification. L’utilisateur ou l’utilisatrice est ajouté au profil de produit.
 
-Répétez ces étapes pour chaque environnement auquel l’utilisateur doit accéder, comme le développement, l’évaluation ou la production.
+Répétez ces étapes pour chaque environnement auquel l’utilisateur ou l’utilisatrice doit accéder, comme le développement, l’évaluation ou la production.
 
 >[!CAUTION]
 >
->Ne modifiez ou ne supprimez pas les profils de produit par défaut nommés **[!UICONTROL Administrateurs]** ou **[!UICONTROL Utilisateurs AEM]**. Le changement de nom de **[!UICONTROL Administrateurs]** supprime les droits d’administrateur de toutes les personnes qui lui sont affectées.
+>Ne modifiez ou ne supprimez pas les profils de produit nommés **[!UICONTROL Administrateurs et administratrices AEM]** ou **[!UICONTROL Utilisateurs et utilisatrices AEM]**. Le changement de nom de **[!UICONTROL Administrateurs et administratrices AEM]** supprime les droits d’administration de toutes les personnes qui lui sont affectées.
 
-### Vérifier l’affectation {#verify-assignment}
+### Vérifiez l’affectation {#verify-assignment}
 
-Pour vérifier que l’affectation a réussi :
+Pour vérifier que l’affectation a réussi :
 
 1. Dans [!DNL Admin Console], rouvrez le profil de produit que vous avez affecté.
-1. Vérifiez que l’utilisateur apparaît dans la liste des membres.
+1. Vérifiez que l’utilisateur ou l’utilisatrice apparaît dans la liste des membres.
 
-Si vous résolvez les problèmes d’accès ou de jeton, vérifiez que l’utilisateur est ajouté directement au profil de produit et pas seulement par l’intermédiaire d’un groupe.
+Si vous résolvez les problèmes d’accès ou de jeton, vérifiez que l’utilisateur ou l’utilisatrice est ajouté directement au profil de produit et pas seulement par l’intermédiaire d’un groupe.
 
 ## Étape 1 : ouvrir l’onglet Configuration de l’IA dédiée au contenu {#open-tab}
 
@@ -98,9 +98,9 @@ Une source de contenu définit le site web que l’IA dédiée au contenu explor
 
 1. Sélectionnez **[!UICONTROL Créer une source]**. L’acquisition démarre automatiquement et la source passe à **Indexation**.
 
-   ![Liste Sources de contenu affichant la source nouvellement créée au statut Indexation &#x200B;](../assets/content-ai-onboarding-step-6.png)
+   ![Liste des sources de contenu affichant la source nouvellement créée au statut Indexation](../assets/content-ai-onboarding-step-6.png)
 
-## Etape 3 - Réexécuter l&#39;acquisition {#trigger-acquisition}
+## Étape 3 : ré-exécuter l’acquisition {#trigger-acquisition}
 
 L’acquisition s’exécute automatiquement lorsque vous créez une source, puis selon le planning défini par la **[!UICONTROL fréquence d’actualisation]**. Vous pouvez également déclencher une exécution manuelle à tout moment, par exemple, pour réindexer immédiatement après la publication d’un nouveau contenu.
 
@@ -116,9 +116,9 @@ L’acquisition s’exécute automatiquement lorsque vous créez une source, pui
 
 Une fois l’acquisition commencée, le statut de la source est mis à jour en temps réel.
 
-| État | Signification |
+| Statut | Signification |
 | --- | --- |
-| **Nouveau** | Source vient de se créer ; l&#39;acquisition automatique n&#39;a pas encore commencé. Ce statut est bref. |
+| **Nouveau** | La source vient d’être créée ; l’acquisition automatique n’a pas encore commencé. Ce statut est de courte durée. |
 | **Indexation** | L’acquisition est en cours. Le contenu est en cours d’exploration et d’indexation. |
 | **Disponible** | L’indexation est terminée. La source est prête à répondre aux requêtes de recherche. |
 
@@ -132,9 +132,9 @@ Attendez que le statut devienne **Disponible** avant de rechercher l’index ou 
 
 Une fois que le statut de la source est **Disponible**, vous pouvez exécuter des requêtes de recherche directement depuis Cloud Manager pour vérifier que le contenu a été indexé correctement.
 
-1. Dans la liste des sources, cliquez sur l’icône **rechercher** (loupe) située en regard de votre source.
+1. Dans la liste des sources, sélectionnez **Rechercher** (icône de loupe) en regard de votre source.
 
-   ![Liste Sources de contenu avec l’icône de recherche mise en surbrillance sur une source disponible](../assets/content-ai-onboarding-step-13.png)
+   ![Liste des sources de contenu avec l’icône Rechercher mis en évidence sur une source disponible](../assets/content-ai-onboarding-step-13.png)
 
 1. Saisissez une requête dans le champ de recherche. Les résultats affichent une liste d’éléments correspondants avec un score et un type de contenu correspondants (par exemple, **PAGE** ou **PDF**). La sélection d’un résultat ouvre un aperçu à droite.
 
@@ -152,13 +152,13 @@ Pour mettre à jour une configuration source après sa création :
 
 1. Dans la boîte de dialogue **[!UICONTROL Modifier la source d’IA dédiée au contenu]**, mettez à jour la **[!UICONTROL description]**, l’**[!UICONTROL adresse du site web]**, les **[!UICONTROL URL à exclure]** ou la **[!UICONTROL fréquence d’actualisation]** selon les besoins. Le **[!UICONTROL nom de la configuration de l’IA dédiée au contenu]** est en lecture seule et ne peut pas être modifié.
 
-   ![Boîte de dialogue Modifier le Source de l’IA dédiée au contenu avec les champs modifiables mis en surbrillance](../assets/content-ai-onboarding-step-12.png)
+   ![Boîte de dialogue Modifier la source d’IA dédiée au contenu avec les champs modifiables en évidence](../assets/content-ai-onboarding-step-12.png)
 
-1. Sélectionnez **[!UICONTROL Enregistrer]** pour appliquer les modifications. La liste des sources est mise à jour pour prendre en compte vos modifications.
+1. Cliquez sur **[!UICONTROL Enregistrer]** pour appliquer les modifications. La liste des sources est mise à jour pour prendre en compte vos modifications.
 
 ### Supprimer une source {#delete}
 
-1. Dans la liste source, cliquez sur l’icône **autres actions** (...) en regard de la source, puis sélectionnez **[!UICONTROL Supprimer]**.
+1. Dans la liste des sources, sélectionnez l’icône **Plus d’actions** (…) en regard de la source, puis **[!UICONTROL Supprimer]**.
 
    >[!WARNING]
    >
