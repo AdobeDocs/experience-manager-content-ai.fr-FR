@@ -30,7 +30,7 @@ Avant de commencer, assurez-vous que les conditions suivantes sont remplies :
 
 * Vous disposez d’un programme Cloud Manager actif avec au moins un environnement AEM as a Cloud Service.
 * Votre utilisateur est affecté au profil de produit **[!UICONTROL Utilisateurs]** (pour afficher les sources de contenu) et/ou **[!UICONTROL Administrateurs AEM]** (pour les créer et les modifier), affecté au niveau **publication** - l’IA dédiée au contenu indexe le contenu publié, et non le contenu créé. Voir [Affecter un utilisateur à un profil de produit AEM](contentsources.md#assign-product-profile) pour la procédure complète.
-* Le profil de produit de l’environnement a été configuré dans ****.
+* Le profil de produit de l’environnement a été configuré dans **&#x200B;**.
 
 >[!NOTE]
 >
@@ -40,7 +40,7 @@ Avant de commencer, assurez-vous que les conditions suivantes sont remplies :
 
 Les index de référentiel existants apparaissent automatiquement dans la liste Sources de contenu sous la forme AEM de type Source, indiqué par ce qu’ils indexent, comme les pages, les Assets ou les fragments de contenu. Ils démarrent **Restreint** et verrouillés, pas encore consultables via l’IA dédiée au contenu.
 
-1. Connectez-vous à [](https://my.cloudmanager.adobe.com/), sélectionnez votre programme et ouvrez l’onglet **[!UICONTROL Configuration de l’IA dédiée au contenu]** pour l’environnement que vous souhaitez configurer.
+1. Connectez-vous à [&#128279;](https://my.cloudmanager.adobe.com/), sélectionnez votre programme et ouvrez l’onglet **[!UICONTROL Configuration de l’IA dédiée au contenu]** pour l’environnement que vous souhaitez configurer.
 1. Recherchez la source en fonction de laquelle vous souhaitez effectuer une recherche (par exemple, **Pages**) et sélectionnez son icône de verrouillage. Seuls les utilisateurs disposant du profil de produit **[!UICONTROL Administrateurs]** peuvent effectuer cette opération. **[!UICONTROL Les utilisateurs AEM]** peuvent afficher les sources de contenu, sans modifier leur capacité de recherche.
 1. Lisez le **Rendre la source consultable ?** dialoguez soigneusement. Elle vous avertit que les listes de contrôle d’accès (ACL) Apache Oak ne seront pas appliquées pour cet index une fois qu’il sera consultable. Tout utilisateur authentifié pourra récupérer l’intégralité de son contenu. Cochez **Je comprends que les contrôles d’accès (ACL) ne sont pas appliqués et que tout le contenu de cette source peut faire l’objet de recherches** puis sélectionnez **Rendre consultable**.
 1. Confirmez les modifications de statut en **Disponible**. Une icône d’avertissement reste en regard de la source pour rappeler en permanence que les listes de contrôle d’accès sont ignorées pour celle-ci.
@@ -123,7 +123,7 @@ AEM Content Recherche optimisée par l&#39;IA est un composant principal [!DNL A
 
 * [!DNL AEM] composants principaux installés dans votre projet.
 * Au moins un Source de contenu a déjà été créé et a le statut **Disponible**.
-* La configuration OSGi du client d’IA dédiée au contenu AEM **** (`ContentAIClientImpl`) sur les instances de création et de publication, avec des informations d’identification d’API valides et un Source de contenu par défaut.
+* La configuration OSGi du client d’IA dédiée au contenu AEM **&#x200B;**&#x200B;(`ContentAIClientImpl`) sur les instances de création et de publication, avec des informations d’identification d’API valides et un Source de contenu par défaut.
 
 Pour obtenir le guide de configuration complet (mise à disposition du composant pour les auteurs, câblage de sa bibliothèque cliente et configuration de la boîte de dialogue), consultez la [documentation sur les composants principaux](https://www.adobe.com/go/aem_cmp_library_fr).
 
