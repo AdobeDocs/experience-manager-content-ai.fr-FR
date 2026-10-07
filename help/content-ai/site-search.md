@@ -6,35 +6,33 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: IA dédiée au contenu d’AEM, Recherche optimisée par l’IA dédiée au contenu d’AEM, GenSearch, Recherche rapide, Sources d’IA dédiée au contenu, Acquisition, Cloud Manager
-source-git-commit: 51fa66b5ac0ef77e438db76530788826da65f91e
-workflow-type: ht
-source-wordcount: '1487'
-ht-degree: 100%
-
+source-git-commit: d8bd542a6a2d7e467b0d50e022f1e019d6f5b5ff
+workflow-type: tm+mt
+source-wordcount: '1458'
+ht-degree: 77%
 ---
-
 
 # Commencer avec la recherche optimisée par l’IA dédiée au contenu d’AEM
 
-La recherche traditionnelle sur un site met en correspondance les mots qu’un visiteur ou une visiteuse saisit avec les mots présents dans votre contenu. Cela fonctionne correctement lorsque les visiteurs et visiteuses utilisent la même terminologie que votre contenu, mais dévie lorsqu’ils posent une question, expriment une intention ou expriment simplement les choses différemment. La recherche est l’un des signaux les plus clairs de l’intention des visiteurs et visiteuses sur un site. Par conséquent, un échec de correspondance signifie souvent un échec du parcours : le contenu n’est pas découvert, l’engagement est abandonné et les conversions sont perdues. Les visiteurs et visiteuses s’attendent de plus en plus à ce que la recherche comprenne ce qu’ils veulent dire, pas seulement ce qu’ils ont saisi. C’est ce même principe basé sur l’intention qui rend les réponses génératives possibles.
+La recherche traditionnelle sur un site met en correspondance les mots qu’un visiteur ou une visiteuse saisit avec les mots présents dans votre contenu. Cela fonctionne bien lorsque les visiteurs utilisent la même terminologie que votre contenu. Il échoue lorsqu&#39;ils posent une question, expriment une intention ou formulent les choses différemment. La recherche est l’un des signaux les plus clairs de l’intention des visiteurs et visiteuses sur un site. Par conséquent, un échec de correspondance signifie souvent un échec du parcours : le contenu n’est pas découvert, l’engagement est abandonné et les conversions sont perdues. Les visiteurs s’attendent de plus en plus à ce que la recherche comprenne ce qu’ils signifient, et pas seulement ce qu’ils tapent. La même base basée sur l’intention permet également d’obtenir des réponses génératives.
 
 La recherche optimisée par l’IA dédiée au contenu d’AEM ne remplace pas l’expérience de recherche de votre site. Elle l’améliore, en passant de la correspondance de mots-clés à la compréhension de la signification et de l’intention et la réponse directe aux questions. La recherche sémantique permet une récupération basée sur l’intention en plus de votre expérience de recherche existante, présentant ainsi le contenu pertinent même lorsqu’une requête ne partage pas la formulation exacte du contenu. La recherche générative s’appuie sur le même principe de récupération pour produire des réponses contextuelles générées et basées sur le contenu de votre site. Il s’agit d’une étape distincte et non du même processus que la récupération sémantique.
 
-Pour les visiteurs et visiteuses, cela se traduit par une meilleure pertinence, une prise en charge du langage naturel, moins de recherches sans résultat et des réponses plus rapides. Pour votre entreprise, cela se traduit par une meilleure correspondance d’intention, une découverte de contenu plus fiable et une base de recherche prête pour l’IA, sans devoir reconstruire votre expérience de recherche à partir de zéro. Et pour finir, pour votre équipe, il s’agit d’une mise à niveau incrémentielle : votre composant de recherche existant peut passer progressivement de fonctionnalités lexicales à des fonctionnalités sémantiques et génératives plutôt qu’une implémentation totalement nouvelle.
+Pour les visiteurs et visiteuses, cela se traduit par une meilleure pertinence, une prise en charge du langage naturel, moins de recherches sans résultat et des réponses plus rapides. Pour votre entreprise, cela se traduit par une meilleure correspondance d’intention, une découverte de contenu plus fiable et une base de recherche prête pour l’IA, sans devoir reconstruire votre expérience de recherche à partir de zéro. Pour votre équipe, il s’agit d’une mise à niveau incrémentielle : votre composant de recherche existant peut passer de lexical, sémantique et génératif pas à pas, plutôt que d’avoir besoin d’une nouvelle implémentation.
 
-Pour y parvenir, deux décisions s’imposent : comment votre contenu entre dans l’IA dédiée au contenu et quel composant le présente aux visiteurs et visiteuses. Connectez votre contenu, puis ajoutez un composant de recherche à une page. Votre site est alors prêt à fournir aux visiteurs et visiteuses les résultats les plus pertinents et des réponses basées sur l’intention.
+Pour y parvenir, vous devez prendre deux décisions : comment votre contenu entre dans l’IA dédiée au contenu et quel composant l’apporte aux visiteurs et aux visiteuses. Pour donner aux visiteurs des résultats pertinents et des réponses basées sur l’intention, connectez votre contenu, puis ajoutez un composant de recherche à une page.
 
-## Prérequis {#prerequisites}
+## Conditions préalables {#prerequisites}
 
 Avant de commencer, assurez-vous que les conditions suivantes sont remplies :
 
 * Vous disposez d’un programme Cloud Manager actif avec au moins un environnement AEM as a Cloud Service.
-* Votre utilisateur ou utilisatrice se voit affecter le profil de produit **[!UICONTROL Utilisateurs et utilisatrices AEM]** (pour afficher les sources de contenu) et/ou **[!UICONTROL Administrateurs et administratrices AEM]** (pour les créer et les modifier), affecté au niveau de **publication**. L’IA dédiée au contenu indexe le contenu publié, et non le contenu créé. Voir [Affecter un utilisateur ou une utilisatrice à un profil de produit AEM](contentsources.md#assign-product-profile) pour la procédure complète.
+* Votre utilisateur est affecté au profil de produit **[!UICONTROL Utilisateurs]** (pour afficher les sources de contenu) et/ou **[!UICONTROL Administrateurs AEM]** (pour les créer et les modifier) aux niveaux **auteur** et **publication**. Voir [Affecter un utilisateur ou une utilisatrice à un profil de produit AEM](contentsources.md#assign-product-profile) pour la procédure complète.
 * Le profil de produit d’environnement a été configuré dans **Adobe Admin Console**.
 
 >[!NOTE]
 >
->L’accès à Cloud Manager seul n’est pas suffisant. Un utilisateur ou une utilisatrice a également besoin d’un profil de produit AEM affecté au niveau de publication pour afficher ou gérer les sources de contenu.
+>L’accès à Cloud Manager seul n’est pas suffisant. Un utilisateur a également besoin d’un profil de produit AEM affecté aux niveaux de création et de publication pour afficher ou gérer les sources de contenu.
 
 ## Étape 1a : connecter un index existant {#option-a}
 
@@ -42,9 +40,9 @@ Les index de référentiel existants apparaissent automatiquement dans la liste 
 
 1. Connectez-vous à [Cloud Manager](https://my.cloudmanager.adobe.com/), sélectionnez votre programme et ouvrez l’onglet **[!UICONTROL Configuration de l’IA dédiée au contenu]** pour l’environnement que vous souhaitez configurer.
 1. Recherchez la source sur laquelle vous souhaitez effectuer une recherche (par exemple, **Pages**) et sélectionnez son icône de verrouillage. Seuls les utilisateurs et utilisatrices disposant du profil de produit **[!UICONTROL Administrateurs et administratrices AEM]** peuvent effectuer cette opération. Les **[!UICONTROL Utilisateurs et utilisatrices AEM]** peuvent afficher les sources de contenu, sans modifier leur capacité de recherche.
-1. Lisez la boîte de dialogue **Rendre la source interrogeable ?** attentivement. Elle vous informe que les listes de contrôle d’accès (ACL) Apache Oak ne seront pas appliquées pour cet index une fois qu’il sera interrogeable. Tout utilisateur ou toute utilisatrice authentifié pourra récupérer l’intégralité de son contenu. Cochez la case **Je comprends que les contrôles d’accès (ACL) ne sont pas appliqués et que tout le contenu de cette source peut faire l’objet de recherches** puis sélectionnez **Rendre interrogeable**.
+1. Lisez la boîte de dialogue **Rendre la source interrogeable ?** attentivement. Elle vous avertit que les listes de contrôle d’accès (ACL) Apache Oak ne sont pas appliquées pour cet index une fois qu’il devient consultable. Tout utilisateur authentifié peut récupérer l’intégralité de son contenu. Cochez la case **Je comprends que les contrôles d’accès (ACL) ne sont pas appliqués et que tout le contenu de cette source peut faire l’objet de recherches** puis sélectionnez **Rendre interrogeable**.
 1. Confirmez les changements de statut en **Disponible**. Une icône d’avertissement reste en regard de la source pour rappeler en permanence que les listes de contrôle d’accès sont ignorées pour celle-ci.
-1. Exécutez une recherche de test pour vérifier que les résultats sont correctement renvoyés.
+1. Pour vérifier les résultats, exécutez une recherche de test.
 
 >[!WARNING]
 >
@@ -52,7 +50,7 @@ Les index de référentiel existants apparaissent automatiquement dans la liste 
 
 >[!NOTE]
 >
->Ce processus convient si vous disposez déjà d’un index avec le contenu de votre site, par exemple, le contenu de votre page. Utilisez cet index au lieu de configurer un mécanisme d’exploration distinct.
+>Utilisez ce chemin si vous disposez déjà d’un index avec le contenu de votre site, tel que le contenu de votre page. Utilisez cet index au lieu de configurer un mécanisme d’exploration distinct.
 
 ## Étape 1b : explorer un site web {#option-b}
 
@@ -77,11 +75,11 @@ Utilisez ce processus si vous ne disposez pas déjà d’un index de recherche p
    | **Indexation** | Exploration et indexation en cours. |
    | **Disponible** | Indexation terminée ; prête à répondre aux requêtes de recherche. |
 
-1. Sélectionnez l’icône de **recherche** en regard de la source et exécutez une requête de test pour confirmer que votre contenu a été correctement indexé.
+1. Pour confirmer que votre contenu a été correctement indexé, sélectionnez l’icône **rechercher** à côté de la source et exécutez une requête de test.
 
 >[!CAUTION]
 >
->Source bloquée au statut **[!UICONTROL Indexation]** ? Réessayez tout d’abord l’acquisition à partir du menu (…). Si elle ne progresse toujours pas, vérifiez que l’adresse du site web est accessible au public et que vos modèles **[!UICONTROL Exclure les URL]** ne filtrent pas toutes les pages.
+>Si une source reste dans **[!UICONTROL Indexation]**, essayez d’abord d’effectuer une nouvelle acquisition à partir du menu (...). Si elle ne progresse toujours pas, vérifiez que l’adresse du site web est accessible au public et que vos modèles **[!UICONTROL Exclure les URL]** ne filtrent pas toutes les pages.
 
 ## Étape 2 : choisir un composant de recherche {#choose-component}
 
@@ -99,15 +97,15 @@ Deux composants permettent d’effectuer une recherche sur une page, conçus sur
 Si votre site utilise déjà le composant Recherche rapide [!DNL AEM] classique, la v3 ajoute un bouton d’activation/de désactivation de **Recherche optimisée par l’IA** que les visiteurs et visiteuses peuvent activer ; aucun nouveau composant, proxy ni nouvelle source de contenu n’est requis.
 
 * La recherche s’exécute toujours via le même chemin JCR/QueryBuilder qu’actuellement ; rien ne change dans la servlet de résultat ou dans la manière dont les résultats sont rendus.
-* Lorsqu’un visiteur ou une visiteuse active le bouton (bascule), le composant préfixe la requête avec un marqueur spécial qui l’achemine vers une correspondance sémantique au lieu du texte intégral du mot-clé brut.
-* Il n’y a pas de résumé de réponse générative de réponse dans ce processus. Il améliore la qualité de correspondance de la liste de résultats existante ; il n’ajoute pas de réponse d’IA générative.
+* Lorsqu’un visiteur active le bouton (bascule), le composant préfixe la requête avec un marqueur spécial qui l’achemine vers une correspondance sémantique au lieu d’une recherche en texte intégral par mot-clé brut.
+* Ce chemin ne comporte pas de résumé de réponse génératif. Il améliore la qualité de correspondance de la liste de résultats existante ; il n’ajoute pas de réponse d’IA générative.
 * **L’étape 1 (intégration de l’IA dédiée au contenu) ne s’applique pas à ce processus.** Il n’y a pas de source de contenu à créer ou à connecter. Ce composant interroge directement votre index de page existant.
 
 >[!NOTE]
 >
 >Si la recherche sémantique ne fonctionne pas comme prévu après avoir activé le bouton, ouvrez un ticket d’assistance.
 
-Ce processus convient si vous souhaitez une mise à niveau incrémentielle de la recherche sémantique sans utiliser de nouveau composant ou de nouvelles sources de contenu. Ce n’est pas le processus approprié si vous souhaitez disposer de l’expérience de réponse générative ; pour cela, utilisez la recherche optimisée par l’IA dédiée au contenu d’AEM.
+Utilisez ce chemin d’accès si vous souhaitez effectuer une mise à niveau de la recherche sémantique incrémentielle sans adopter de nouveau composant ou de nouvelles sources de contenu. Ce n’est pas le bon chemin si vous souhaitez une expérience de réponse générative ; utilisez la Recherche optimisée par l&#39;IA de contenu AEM à cet effet.
 
 ## Recherche optimisée par l’IA dédiée au contenu d’AEM {#gensearch}
 
@@ -119,7 +117,7 @@ La recherche optimisée par l’IA dédiée au contenu d’AEM est un composant 
 >
 >Les fonctionnalités de recherche générative sont achetées séparément via un SKU d’IA. Contactez votre représentant ou représentante du service commercial Adobe pour l’activer pour votre compte.
 
-### Prérequis {#gensearch-prerequisites}
+### Conditions préalables {#gensearch-prerequisites}
 
 * Composants principaux d’[!DNL AEM] installés dans votre projet.
 * Au moins une source de contenu déjà créée et au statut **Disponible**.
@@ -127,7 +125,7 @@ La recherche optimisée par l’IA dédiée au contenu d’AEM est un composant 
 
 Pour obtenir le guide de configuration complet, mise à disposition du composant pour les créateurs et créatrices, raccordement de sa bibliothèque cliente et configuration de la boîte de dialogue, consultez la [documentation sur les composants principaux](https://www.adobe.com/go/aem_cmp_library_fr).
 
-## Félicitations. {#congratulations}
+## Félicitations ! {#congratulations}
 
 Vous avez correctement configuré vos fonctionnalités de recherche sémantique et générative.
 
