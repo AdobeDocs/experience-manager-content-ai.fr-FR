@@ -52,10 +52,10 @@ Pour créer des programmes lors de l’intégration initiale, l’administrateur
 
 Pour en savoir plus, voir :
 
-* [Affectation de membres d’équipe à des profils de produit Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager)
+* [Affectation de membres d’équipe à des profils de produit Cloud Manager](https://experienceleague.adobe.com/fr/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager)
 * [Accéder à Cloud Manager](https://experienceleague.adobe.com/fr/docs/experience-manager-cloud-service/content/onboarding/journey/cloud-manager)
-* [Équipe AEM as a Cloud Service et profils de produits](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/concepts/aem-cs-team-product-profiles)
-* [Ajouter des utilisateurs et utilisatrices et des rôles](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/users-and-roles)
+* [Équipe AEM as a Cloud Service et profils de produits](https://experienceleague.adobe.com/fr/docs/experience-manager-cloud-service/content/onboarding/concepts/aem-cs-team-product-profiles)
+* [Ajouter des utilisateurs et utilisatrices et des rôles](https://experienceleague.adobe.com/fr/docs/experience-manager-cloud-manager/content/requirements/users-and-roles)
 
 ## Affecter un utilisateur ou une utilisatrice à un profil de produit AEM {#assign-product-profile}
 
