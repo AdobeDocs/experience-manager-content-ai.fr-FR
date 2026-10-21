@@ -18,7 +18,7 @@ level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
     internal-label: Beginner
 source-git-commit: 1364d35876ef0fcc502a3d02f8025ee7df067daf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '714'
 ht-degree: 100%
 ---
@@ -29,7 +29,7 @@ Pour appeler l’API de services d’IA dédiée au contenu d’AEM, vous avez b
 
 Accédez à [Adobe Developer Console](https://developer.adobe.com/console/) pour votre organisation afin de commencer.
 
-## Conditions préalables {#prerequisites}
+## Prérequis {#prerequisites}
 
 Avant de commencer, vérifiez que vous disposez des éléments suivants :
 
