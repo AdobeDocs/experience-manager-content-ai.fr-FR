@@ -17,10 +17,10 @@ role_v2:
 level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
     internal-label: Beginner
-source-git-commit: 1364d35876ef0fcc502a3d02f8025ee7df067daf
-workflow-type: ht
+source-git-commit: fb7ec4db1f4d90acc88b594de4c3e4ca720be2df
+workflow-type: tm+mt
 source-wordcount: '714'
-ht-degree: 100%
+ht-degree: 98%
 ---
 
 # Configurer un projet Adobe Developer Console {#configure-adc-project}
@@ -126,4 +126,4 @@ Les services d’IA dédiée au contenu d’AEM prennent en charge deux méthode
 ## Étapes suivantes {#next-steps}
 
 * [Contrôler vos sources de contenu](contentsources.md) : configurez une source de contenu dans Cloud Manager et déclenchez l’acquisition.
-* [Référence de l’API d’IA dédiée au contenu](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) : utilisez votre jeton d’accès ou votre clé API pour interroger le contenu indexé.
+* [Référence de l’API d’IA dédiée au contenu](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentai/) : utilisez votre jeton d’accès ou votre clé API pour interroger le contenu indexé.
