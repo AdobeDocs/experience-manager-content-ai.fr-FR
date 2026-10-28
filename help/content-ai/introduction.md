@@ -17,10 +17,10 @@ role_v2:
 level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
     internal-label: Beginner
-source-git-commit: 1364d35876ef0fcc502a3d02f8025ee7df067daf
-workflow-type: ht
+source-git-commit: fb7ec4db1f4d90acc88b594de4c3e4ca720be2df
+workflow-type: tm+mt
 source-wordcount: '885'
-ht-degree: 100%
+ht-degree: 98%
 ---
 
 # IA dédiée au contenu d’AEM - Introduction
@@ -80,4 +80,4 @@ Configurez et gérez vos sources d’IA dédiée au contenu pour activer les exp
 
 ## Découvrir les API de l’IA dédiée au contenu  {#apis}
 
-Explorez l’ampleur fonctionnelle de l’IA dédiée au contenu d’AEM : les API révèlent tout le potentiel de la plateforme. Consultez les [APId’ IA dédiée au contenu](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/).
+Explorez l’ampleur fonctionnelle de l’IA dédiée au contenu d’AEM : les API révèlent tout le potentiel de la plateforme. Consultez les [APId’ IA dédiée au contenu](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentai/).

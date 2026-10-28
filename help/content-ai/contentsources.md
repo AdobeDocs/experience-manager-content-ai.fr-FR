@@ -17,10 +17,10 @@ role_v2:
 level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
     internal-label: Beginner
-source-git-commit: 1364d35876ef0fcc502a3d02f8025ee7df067daf
-workflow-type: ht
+source-git-commit: fb7ec4db1f4d90acc88b594de4c3e4ca720be2df
+workflow-type: tm+mt
 source-wordcount: '1671'
-ht-degree: 100%
+ht-degree: 99%
 ---
 
 # Configurer et gérer vos sources d’IA dédiée au contenu
@@ -212,7 +212,7 @@ Après la suppression, la source n’apparaît plus dans la liste.
 ## Étapes suivantes {#next-steps}
 
 * [Configurer un projet Adobe Developer Console](setup-adc-project.md) : créez le projet ADC et les informations d’identification dont vous avez besoin pour appeler l’API
-* [Référence de l’API d’IA dédiée au contenu](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) : interrogez votre contenu indexé à l’aide de points d’entrée de recherche sémantiques, en texte intégral ou hybride.
+* [Référence de l’API d’IA dédiée au contenu](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentai/) : interrogez votre contenu indexé à l’aide de points d’entrée de recherche sémantiques, en texte intégral ou hybride.
 
 ## Résolution des problèmes {#troubleshooting}
 

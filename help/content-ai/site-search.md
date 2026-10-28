@@ -17,10 +17,10 @@ role_v2:
 level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
     internal-label: Beginner
-source-git-commit: 1364d35876ef0fcc502a3d02f8025ee7df067daf
-workflow-type: ht
+source-git-commit: fb7ec4db1f4d90acc88b594de4c3e4ca720be2df
+workflow-type: tm+mt
 source-wordcount: '1458'
-ht-degree: 100%
+ht-degree: 99%
 ---
 
 # Commencer avec la recherche optimisée par l’IA dédiée au contenu d’AEM
@@ -136,7 +136,7 @@ La recherche optimisée par l’IA dédiée au contenu d’AEM est un composant 
 
 Pour obtenir le guide de configuration complet, mise à disposition du composant pour les créateurs et créatrices, raccordement de sa bibliothèque cliente et configuration de la boîte de dialogue, consultez la [documentation sur les composants principaux](https://www.adobe.com/go/aem_cmp_library_fr).
 
-## Félicitations ! {#congratulations}
+## Félicitations. {#congratulations}
 
 Vous avez correctement configuré vos fonctionnalités de recherche sémantique et générative.
 
@@ -145,5 +145,5 @@ Vous avez correctement configuré vos fonctionnalités de recherche sémantique 
 ## Étapes suivantes {#next-steps}
 
 * [Configurer un projet Adobe Developer Console](setup-adc-project.md) : créez le projet ADC et les informations d’identification dont vous avez besoin pour appeler directement l’API d’IA dédiée au contenu.
-* [Référence de l’API d’IA dédiée au contenu](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) : interrogez votre contenu indexé à l’aide de points d’entrée de recherche sémantique, générative ou hybride.
+* [Référence de l’API d’IA dédiée au contenu](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentai/) : interrogez votre contenu indexé à l’aide de points d’entrée de recherche sémantique, générative ou hybride.
 * [Documentation sur les composants principaux](https://www.adobe.com/go/aem_cmp_library_fr) : en savoir plus sur les composants proxy et les politiques de modèle.
