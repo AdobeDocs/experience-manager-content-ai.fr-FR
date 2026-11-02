@@ -18,9 +18,9 @@ level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
     internal-label: Beginner
 source-git-commit: fb7ec4db1f4d90acc88b594de4c3e4ca720be2df
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '714'
-ht-degree: 98%
+ht-degree: 100%
 ---
 
 # Configurer un projet Adobe Developer Console {#configure-adc-project}
@@ -36,7 +36,7 @@ Avant de commencer, vérifiez que vous disposez des éléments suivants :
 * Vous avez accès à [Adobe Developer Console](https://developer.adobe.com/console/) pour votre organisation.
 * Vous avez le rôle de **développeur ou développeuse** sur le profil de produit de services d’IA dédiée au contenu d’AEM dans **Adobe Admin Console**. Sans ce rôle, la carte de l’API **[!UICONTROL Services d’IA dédiée au contenu d’AEM]** apparaît désactivée et l’option d’authentification **[!UICONTROL serveur à serveur]** est masquée.
 * Vous connaissez les numéros de programme et d’environnement du profil de produit que vous souhaitez sélectionner (par exemple, `AEM User - publish - Program 12345 - Environment 67890`).
-* Vous détenez le rôle **[Administrateur ou administratrice système](https://experienceleague.adobe.com/fr/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)** dans Admin Console pour le programme. Ce rôle vous permet de gérer les profils de produit et d’affecter des utilisateurs et utilisatrices à l’environnement.
+* Vous détenez le rôle **[Administrateur ou administratrice système](https://experienceleague.adobe.com/fr/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)** dans Admin Console pour le programme.Ce rôle vous permet de gérer les profils de produit et d’affecter des utilisateurs et utilisatrices à l’environnement.
 
 ## Choisir une méthode d’authentification {#choose-auth}
 
