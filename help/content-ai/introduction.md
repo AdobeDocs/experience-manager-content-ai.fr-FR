@@ -18,9 +18,9 @@ level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
     internal-label: Beginner
 source-git-commit: fb7ec4db1f4d90acc88b594de4c3e4ca720be2df
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '885'
-ht-degree: 98%
+ht-degree: 100%
 ---
 
 # IA dédiée au contenu d’AEM - Introduction
@@ -70,7 +70,7 @@ Ces niveaux sont conçus pour être connectées : chaque service d’IA puise d
 
 Pour obtenir une intégration de l’IA dédiée au contenu fonctionnelle, deux tâches sont nécessaires :
 
-### &#x200B;1. Activer l’IA dédiée au contenu pour votre environnement AEM {#enable}
+### 1.Activer l’IA dédiée au contenu pour votre environnement AEM {#enable}
 
 **Condition requis :** avant de commencer à utiliser l’IA dédiée au contenu, vous devez connaître les informations d’identification d’API de votre environnement AEM as a Cloud Service. Consultez [Configurer un projet Adobe Developer Console](setup-adc-project.md).
 
